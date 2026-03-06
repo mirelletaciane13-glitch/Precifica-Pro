@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --color-pastel-pink: #ffd1dc;
+  --color-pastel-blue: #b4e1ff;
+  --color-pastel-green: #c1f0c1;
+  --color-pastel-yellow: #fff9c4;
+  --color-pastel-purple: #e1bee7;
+  --color-pastel-orange: #ffccbc;
+}
+
+@layer base {
+  body {
+    @apply bg-stone-50 text-stone-800 font-sans;
+  }
+}
+
+.glass-card {
+  @apply bg-white/80 backdrop-blur-sm border border-white/20 shadow-xl rounded-3xl;
+}
+
+.input-field {
+  @apply w-full px-4 py-2 rounded-xl border border-stone-200 focus:ring-2 focus:ring-pastel-pink focus:border-transparent outline-none transition-all bg-white/50;
+}
+
+.section-title {
+  @apply text-xl font-bold text-stone-700 mb-4 flex items-center gap-2;
+}
+
+.btn-primary {
+  @apply bg-pastel-pink hover:bg-pink-200 text-stone-800 font-bold py-3 px-6 rounded-2xl shadow-lg transition-all active:scale-95 flex items-center justify-center gap-2;
+}
+
+.btn-secondary {
+  @apply bg-pastel-blue hover:bg-blue-200 text-stone-800 font-semibold py-2 px-4 rounded-xl shadow-md transition-all active:scale-95 flex items-center justify-center gap-2;
+}
